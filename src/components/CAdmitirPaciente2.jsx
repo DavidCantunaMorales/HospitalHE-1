@@ -15,7 +15,7 @@ const buttonStyle = {
   cursor: 'pointer',
 };
 
-export const AdmitirPaciente2 = () => {
+export const CAdmitirPaciente2 = () => {
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1>Sistema de Información</h1>

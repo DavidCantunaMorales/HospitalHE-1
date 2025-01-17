@@ -71,7 +71,7 @@ const inputStyle = {
     marginBottom: '20px',
   };
   
-  export const AdmitirPaciente1 = () => {
+  export const CAdmitirPaciente1 = () => {
     return (
       <div style={containerStyle}>
         <h1 style={titleStyle}>Admitir Paciente</h1>
