@@ -1,10 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import { Pacientes } from './components/Pacientes.jsx';
+import { AdmitirPaciente2 } from './components/AdmitirPaciente2.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Pacientes />
+    <AdmitirPaciente2 />
   </StrictMode>
 );
