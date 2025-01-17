@@ -1,132 +1,105 @@
 const inputStyle = {
-  padding: '5px',
-  border: '1px solid #ccc',
-  borderRadius: '4px',
+  padding: '10px',
+  border: '2px solid #004080',
+  borderRadius: '8px',
   flex: '1',
   minWidth: '150px',
+  fontSize: '14px',
+  outline: 'none',
+  transition: 'border-color 0.3s',
+};
+
+const inputHoverFocusStyle = {
+  borderColor: '#00264d',
 };
 
 const buttonStyle = {
   padding: '10px 20px',
-  backgroundColor: '#007BFF',
+  backgroundColor: '#004080',
   color: 'white',
   border: 'none',
-  borderRadius: '4px',
+  borderRadius: '8px',
   cursor: 'pointer',
-  marginBottom: '10px',
 };
 
 export const CAdmitirPaciente2 = () => {
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Sistema de Información</h1>
+    <div style={containerStyle}>
+      <h1 style={titleStyle}>Sistema de Información</h1>
       <form>
-        {/* Sección: Datos principales */}
-        <div style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '20px' }}>
-          <h3>Datos Principales</h3>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <input
-              type='text'
-              placeholder='H.C.'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Apellido Paterno'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Apellido Materno'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Primer Nombre'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Segundo Nombre'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Cédula/Pasaporte'
-              style={inputStyle}
-            />
-          </div>
+        {/* Sección de datos personales */}
+        <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', flexWrap: 'wrap' }}>
+          <input
+            type='text'
+            placeholder='No'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='H.C. Externo'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='H.C. Interna'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Paciente'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Edad'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Sexo'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Fuerza'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Grado'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Situación'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Dirección Domicilio'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Teléfono'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Admisicionista'
+            style={inputStyle}
+          />
+          <input
+            type='text'
+            placeholder='Especialidad de Admisión'
+            style={inputStyle}
+          />
         </div>
 
-        {/* Sección: Detalles de Atención */}
-        <div style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '20px' }}>
-          <h3>Detalles de Atención</h3>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <input
-              type='text'
-              placeholder='No'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='H.C. Externo'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='H.C. Interna'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Paciente'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Edad'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Sexo'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Fuerza'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Grado'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Situación'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Dirección Domicilio'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Teléfono'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Admisiónista'
-              style={inputStyle}
-            />
-            <input
-              type='text'
-              placeholder='Especialidad de Admisión'
-              style={inputStyle}
-            />
+        {/* Sección de permanencia y atención */}
+        <div style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
+          <h3>Permanencia y Atención</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
             <input
               type='text'
               placeholder='Admitido Para'
@@ -134,17 +107,17 @@ export const CAdmitirPaciente2 = () => {
             />
             <input
               type='text'
-              placeholder='Fecha Ingreso'
+              placeholder='Fecha de Ingreso'
               style={inputStyle}
             />
             <input
               type='text'
-              placeholder='Fecha Transferencia'
+              placeholder='Fecha de Transferencia'
               style={inputStyle}
             />
             <input
               type='text'
-              placeholder='Fecha Alta'
+              placeholder='Fecha de Alta'
               style={inputStyle}
             />
             <input
@@ -182,60 +155,34 @@ export const CAdmitirPaciente2 = () => {
               placeholder='Médico'
               style={inputStyle}
             />
-          </div>
-        </div>
-
-        {/* Sección: Acciones principales */}
-        <div style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '20px' }}>
-          <h3>Acciones Principales</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
             <input
               type='text'
               placeholder='Deuda Total en IVA'
               style={inputStyle}
             />
-
-            <button
-              type='button'
-              style={buttonStyle}
-            >
-              Autorización
-            </button>
-            <button
-              type='button'
-              style={buttonStyle}
-            >
-              Dar de Alta
-            </button>
-            <button
-              type='button'
-              style={buttonStyle}
-            >
-              Anular Alta
-            </button>
-            <button
-              type='button'
-              style={buttonStyle}
-            >
-              No Admitir
-            </button>
-            <button
-              type='button'
-              style={buttonStyle}
-            >
-              Evol. Clínica
-            </button>
-            <button
-              type='button'
-              style={buttonStyle}
-            >
-              Hospitalizados
-            </button>
           </div>
         </div>
 
-        {/* Sección: Botones adicionales */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        {/* Sección de botones */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '20px' }}>
+          <button
+            type='button'
+            style={buttonStyle}
+          >
+            Autorización
+          </button>
+          <button
+            type='button'
+            style={buttonStyle}
+          >
+            Dar de Alta
+          </button>
+          <button
+            type='button'
+            style={buttonStyle}
+          >
+            Hospitalizados
+          </button>
           <button
             type='button'
             style={buttonStyle}
