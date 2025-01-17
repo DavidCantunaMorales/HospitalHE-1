@@ -13,18 +13,28 @@ const inputStyle = {
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
+    transition: 'all 0.3s ease',
+  };
+  
+  const buttonHoverStyle = {
+    backgroundColor: '#0056b3',
+    transform: 'scale(1.05)',
+    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
   };
   
   const sectionStyle = {
     border: '1px solid #ccc',
-    padding: '10px',
-    marginBottom: '10px',
+    borderRadius: '8px',
+    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+    padding: '20px',
+    marginBottom: '20px',
   };
   
   const labelStyle = {
     display: 'block',
     marginBottom: '5px',
     fontWeight: 'bold',
+    color: '#333',
   };
   
   const tableStyle = {
@@ -33,21 +43,41 @@ const inputStyle = {
     marginBottom: '10px',
     overflowX: 'auto',
     display: 'block',
+    backgroundColor: '#f9f9f9',
+    borderRadius: '8px',
   };
   
   const thTdStyle = {
     border: '1px solid #ccc',
-    padding: '5px',
+    padding: '10px',
     textAlign: 'left',
+  };
+  
+  const tableHeaderStyle = {
+    backgroundColor: '#f4f4f4',
+    fontWeight: 'bold',
+    textAlign: 'left',
+  };
+  
+  const containerStyle = {
+    padding: '20px',
+    fontFamily: 'Roboto, Arial, sans-serif',
+    color: '#333',
+  };
+  
+  const titleStyle = {
+    textAlign: 'center',
+    color: '#007BFF',
+    marginBottom: '20px',
   };
   
   export const AdmitirPaciente1 = () => {
     return (
-      <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-        <h1>Admitir Paciente</h1>
+      <div style={containerStyle}>
+        <h1 style={titleStyle}>Admitir Paciente</h1>
         <form>
           {/* Fila 1 */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '10px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
             <div>
               <label style={labelStyle}>H.C.</label>
               <input type="text" style={inputStyle} placeholder="H.C." />
@@ -79,10 +109,10 @@ const inputStyle = {
             <h3>Información del Paciente</h3>
   
             {/* Tabla */}
-            <div style={{ marginBottom: '10px', overflowX: 'auto' }}>
+            <div style={{ marginBottom: '20px', overflowX: 'auto' }}>
               <table style={tableStyle}>
                 <thead>
-                  <tr>
+                  <tr style={tableHeaderStyle}>
                     <th style={thTdStyle}>HC Int</th>
                     <th style={thTdStyle}>Cédula/Pasaporte</th>
                     <th style={thTdStyle}>Apellido Paterno</th>
@@ -109,7 +139,7 @@ const inputStyle = {
             </div>
   
             {/* Fila 2.2 */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
               <div>
                 <label style={labelStyle}>Estado Civil</label>
                 <input type="text" style={inputStyle} placeholder="Estado Civil" />
@@ -133,7 +163,7 @@ const inputStyle = {
             </div>
   
             {/* Fila 2.3 */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
               <div>
                 <label style={labelStyle}>Nacionalidad</label>
                 <input type="text" style={inputStyle} placeholder="Nacionalidad" />
@@ -157,7 +187,7 @@ const inputStyle = {
             </div>
   
             {/* Fila 2.4 */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
               <div>
                 <label style={labelStyle}>Provincia</label>
                 <input type="text" style={inputStyle} placeholder="Provincia" />
@@ -170,12 +200,26 @@ const inputStyle = {
                 <label style={labelStyle}>Parroquia</label>
                 <input type="text" style={inputStyle} placeholder="Parroquia" />
               </div>
-              <button type="button" style={buttonStyle}>Completar Datos</button>
-              <button type="button" style={buttonStyle}>Ver Cuenta</button>
+              <button
+                type="button"
+                style={buttonStyle}
+                onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
+                onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
+              >
+                Completar Datos
+              </button>
+              <button
+                type="button"
+                style={buttonStyle}
+                onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
+                onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
+              >
+                Ver Cuenta
+              </button>
             </div>
   
             {/* Fila 2.5 */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
               <div>
                 <label style={labelStyle}>Dirección Domicilio</label>
                 <input type="text" style={inputStyle} placeholder="Dirección Domicilio" />
@@ -230,7 +274,14 @@ const inputStyle = {
                 <label style={labelStyle}>Relación</label>
                 <input type="text" style={inputStyle} placeholder="Relación" />
               </div>
-              <button type="button" style={buttonStyle}>Admitir</button>
+              <button
+                type="button"
+                style={buttonStyle}
+                onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
+                onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
+              >
+                Admitir
+              </button>
             </div>
           </div>
         </form>
