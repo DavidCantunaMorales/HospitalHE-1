@@ -1,70 +1,87 @@
 import { useNavigate } from 'react-router-dom';
 
 const inputStyle = {
-  padding: '5px',
-  border: '1px solid #ccc',
-  borderRadius: '4px',
+  padding: '10px',
+  border: '2px solid #004080',
+  borderRadius: '8px',
   flex: '1',
-  minWidth: '100px',
+  minWidth: '150px',
+  fontSize: '14px',
+  outline: 'none',
+  transition: 'border-color 0.3s',
+};
+
+const inputHoverFocusStyle = {
+  borderColor: '#00264d',
 };
 
 const buttonStyle = {
-  padding: '8px 15px',
-  backgroundColor: '#007BFF',
+  padding: '10px 20px',
+  backgroundColor: '#004080',
   color: 'white',
   border: 'none',
-  borderRadius: '4px',
+  borderRadius: '8px',
   cursor: 'pointer',
-  transition: 'all 0.3s ease',
+  fontSize: '16px',
+  fontWeight: 'bold',
+  transition: 'transform 0.2s, background-color 0.3s',
 };
 
 const buttonHoverStyle = {
-  backgroundColor: '#0056b3',
-  transform: 'scale(1.05)',
-  boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
+  backgroundColor: '#00264d',
+  transform: 'scale(1.1)',
+  boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
 };
 
 const sectionStyle = {
-  border: '1px solid #ccc',
-  borderRadius: '8px',
-  boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+  border: '2px solid #004080',
+  borderRadius: '12px',
+  boxShadow: '0px 10px 20px rgba(0, 64, 128, 0.1)',
   padding: '20px',
   marginBottom: '20px',
+  backgroundColor: '#eaf2ff',
 };
 
 const tableStyle = {
   width: '100%',
   borderCollapse: 'collapse',
   marginBottom: '10px',
-  overflowX: 'auto',
-  display: 'block',
-  backgroundColor: '#f9f9f9',
-  borderRadius: '8px',
+  backgroundColor: '#f0f8ff',
+  borderRadius: '12px',
+  overflow: 'hidden',
+  boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.1)',
 };
 
 const thTdStyle = {
-  border: '1px solid #ccc',
-  padding: '10px',
+  border: '1px solid #004080',
+  padding: '15px',
   textAlign: 'left',
+  fontSize: '14px',
+  fontWeight: '500',
 };
 
 const labelStyle = {
   display: 'block',
-  marginBottom: '5px',
+  marginBottom: '8px',
   fontWeight: 'bold',
-  color: '#333',
+  color: '#004080',
+  fontSize: '14px',
 };
 
 const containerStyle = {
-  padding: '20px',
+  padding: '30px',
   fontFamily: 'Roboto, Arial, sans-serif',
-  color: '#333',
+  //backgroundColor: '#f0f8ff',
+  borderRadius: '12px',
+  boxShadow: '0px 10px 25px rgba(0, 0, 0, 0.2)',
 };
 
 const titleStyle = {
   textAlign: 'center',
-  color: '#007BFF',
+  color: '#004080',
+  fontSize: '28px',
   marginBottom: '20px',
+  fontWeight: '700',
 };
 
 export const CPagPrincipal = () => {
@@ -101,11 +118,11 @@ export const CPagPrincipal = () => {
   ];
 
   const handleNuevaAdmision = () => {
-    navigate('/nueva-admision'); // Redirigir a la página de nueva admisión
+    navigate('/nueva-admision');
   };
 
   const handleNuevaAdmision2 = () => {
-    navigate('/nueva-admision2'); // Redirigir a la página de nueva admisión
+    navigate('/nueva-admision2');
   };
 
   return (
@@ -117,33 +134,19 @@ export const CPagPrincipal = () => {
         <table style={tableStyle}>
           <thead>
             <tr>
-              <th style={thTdStyle}>Servicio</th>
-              <th style={thTdStyle}>Hab.</th>
-              <th style={thTdStyle}>Piso</th>
-              <th style={thTdStyle}>H.C.</th>
-              <th style={thTdStyle}>Apellido Paterno</th>
-              <th style={thTdStyle}>Apellido Materno</th>
-              <th style={thTdStyle}>Primer Nombre</th>
-              <th style={thTdStyle}>Segundo Nombre</th>
-              <th style={thTdStyle}>Edad</th>
-              <th style={thTdStyle}>Sexo</th>
-              <th style={thTdStyle}>Fecha de Ingreso</th>
+              {['Servicio', 'Hab.', 'Piso', 'H.C.', 'Apellido Paterno', 'Apellido Materno', 'Primer Nombre', 'Segundo Nombre', 'Edad', 'Sexo', 'Fecha de Ingreso'].map(
+                (header, index) => (
+                  <th key={index} style={thTdStyle}>{header}</th>
+                )
+              )}
             </tr>
           </thead>
           <tbody>
             {registrosEjemplo.map((registro, index) => (
               <tr key={index}>
-                <td style={thTdStyle}>{registro.servicio}</td>
-                <td style={thTdStyle}>{registro.hab}</td>
-                <td style={thTdStyle}>{registro.piso}</td>
-                <td style={thTdStyle}>{registro.hc}</td>
-                <td style={thTdStyle}>{registro.apellidoPaterno}</td>
-                <td style={thTdStyle}>{registro.apellidoMaterno}</td>
-                <td style={thTdStyle}>{registro.primerNombre}</td>
-                <td style={thTdStyle}>{registro.segundoNombre}</td>
-                <td style={thTdStyle}>{registro.edad}</td>
-                <td style={thTdStyle}>{registro.sexo}</td>
-                <td style={thTdStyle}>{registro.fechaIngreso}</td>
+                {Object.values(registro).map((value, idx) => (
+                  <td key={idx} style={thTdStyle}>{value}</td>
+                ))}
               </tr>
             ))}
           </tbody>
@@ -152,35 +155,41 @@ export const CPagPrincipal = () => {
 
       {/* Controles inferiores */}
       <div style={sectionStyle}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '10px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '20px' }}>
           <div>
             <label style={labelStyle}>Plan Social</label>
-            <input type="text" style={inputStyle} placeholder="ISSFA" />
+            <input
+              type="text"
+              style={inputStyle}
+              placeholder="ISSFA"
+              onFocus={(e) => Object.assign(e.target.style, inputHoverFocusStyle)}
+              onBlur={(e) => Object.assign(e.target.style, inputStyle)}
+            />
           </div>
           <div>
             <label style={labelStyle}>Total deuda sin IVA</label>
-            <input type="text" style={inputStyle} placeholder="793.23" />
+            <input
+              type="text"
+              style={inputStyle}
+              placeholder="793.23"
+              onFocus={(e) => Object.assign(e.target.style, inputHoverFocusStyle)}
+              onBlur={(e) => Object.assign(e.target.style, inputStyle)}
+            />
           </div>
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-          <button
-            style={buttonStyle}
-            onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
-            onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
-            onClick={handleNuevaAdmision} // Agregar la función de redirección
-          >
-            Nueva Admision
-          </button>
-          <button
-            style={buttonStyle}
-            onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
-            onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
-            onClick={handleNuevaAdmision2} // Agregar la función de redirección
-          >
-            Nueva Admision 2
-          </button>
-          {/* Otros botones... */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+          {['Nueva Admision', 'Nueva Admision 2'].map((buttonText, index) => (
+            <button
+              key={index}
+              style={buttonStyle}
+              onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
+              onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
+              onClick={index === 0 ? handleNuevaAdmision : handleNuevaAdmision2}
+            >
+              {buttonText}
+            </button>
+          ))}
         </div>
       </div>
     </div>
