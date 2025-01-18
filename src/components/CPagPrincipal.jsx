@@ -29,8 +29,6 @@ const buttonStyle = {
 
 const buttonHoverStyle = {
   backgroundColor: '#00264d',
-  transform: 'scale(1.1)',
-  boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
 };
 
 const sectionStyle = {
@@ -46,18 +44,20 @@ const tableStyle = {
   width: '100%',
   borderCollapse: 'collapse',
   marginBottom: '10px',
-  backgroundColor: '#f0f8ff',
+  backgroundColor: 'white',
   borderRadius: '12px',
   overflow: 'hidden',
   boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.1)',
 };
 
 const thTdStyle = {
-  border: '1px solid #004080',
+  border: '1px solid #d1d1d1',
   padding: '15px',
   textAlign: 'left',
   fontSize: '14px',
   fontWeight: '500',
+  backgroundColor: '#f7f7f7',
+  color: '#333',
 };
 
 const labelStyle = {
@@ -71,7 +71,6 @@ const labelStyle = {
 const containerStyle = {
   padding: '30px',
   fontFamily: 'Roboto, Arial, sans-serif',
-  //backgroundColor: '#f0f8ff',
   borderRadius: '12px',
   boxShadow: '0px 10px 25px rgba(0, 0, 0, 0.2)',
 };
@@ -134,18 +133,38 @@ export const CPagPrincipal = () => {
         <table style={tableStyle}>
           <thead>
             <tr>
-              {['Servicio', 'Hab.', 'Piso', 'H.C.', 'Apellido Paterno', 'Apellido Materno', 'Primer Nombre', 'Segundo Nombre', 'Edad', 'Sexo', 'Fecha de Ingreso'].map(
-                (header, index) => (
-                  <th key={index} style={thTdStyle}>{header}</th>
-                )
-              )}
+              {[
+                'Servicio',
+                'Hab.',
+                'Piso',
+                'H.C.',
+                'Apellido Paterno',
+                'Apellido Materno',
+                'Primer Nombre',
+                'Segundo Nombre',
+                'Edad',
+                'Sexo',
+                'Fecha de Ingreso',
+              ].map((header, index) => (
+                <th
+                  key={index}
+                  style={thTdStyle}
+                >
+                  {header}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
             {registrosEjemplo.map((registro, index) => (
               <tr key={index}>
                 {Object.values(registro).map((value, idx) => (
-                  <td key={idx} style={thTdStyle}>{value}</td>
+                  <td
+                    key={idx}
+                    style={thTdStyle}
+                  >
+                    {value}
+                  </td>
                 ))}
               </tr>
             ))}
@@ -159,9 +178,9 @@ export const CPagPrincipal = () => {
           <div>
             <label style={labelStyle}>Plan Social</label>
             <input
-              type="text"
+              type='text'
               style={inputStyle}
-              placeholder="ISSFA"
+              placeholder='ISSFA'
               onFocus={(e) => Object.assign(e.target.style, inputHoverFocusStyle)}
               onBlur={(e) => Object.assign(e.target.style, inputStyle)}
             />
@@ -169,9 +188,9 @@ export const CPagPrincipal = () => {
           <div>
             <label style={labelStyle}>Total deuda sin IVA</label>
             <input
-              type="text"
+              type='text'
               style={inputStyle}
-              placeholder="793.23"
+              placeholder='793.23'
               onFocus={(e) => Object.assign(e.target.style, inputHoverFocusStyle)}
               onBlur={(e) => Object.assign(e.target.style, inputStyle)}
             />
@@ -179,18 +198,40 @@ export const CPagPrincipal = () => {
         </div>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-          {['Nueva Admision', 'Nueva Admision 2'].map((buttonText, index) => (
+          {[
+            'Evol. Clínica',
+            'Solicitar Constancia',
+            'Importes',
+            'Ver H. Clínica',
+            'Emergencias',
+            'Signos Vitales',
+            'Actualizar ISSFA',
+          ].map((buttonText, index) => (
             <button
               key={index}
               style={buttonStyle}
               onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
               onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
-              onClick={index === 0 ? handleNuevaAdmision : handleNuevaAdmision2}
             >
               {buttonText}
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Sección de botones */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+        {['Nueva Admision', 'Nueva Admision 2'].map((buttonText, index) => (
+          <button
+            key={index}
+            style={buttonStyle}
+            onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
+            onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
+            onClick={index === 0 ? handleNuevaAdmision : handleNuevaAdmision2}
+          >
+            {buttonText}
+          </button>
+        ))}
       </div>
     </div>
   );

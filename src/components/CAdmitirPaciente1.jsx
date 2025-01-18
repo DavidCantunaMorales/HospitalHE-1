@@ -22,9 +22,7 @@ const buttonStyle = {
 };
 
 const buttonHoverStyle = {
-  backgroundColor: '#00264d',
-  transform: 'scale(1.1)',
-  boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
+  backgroundColor: '#001a33',
 };
 
 const sectionStyle = {
@@ -93,27 +91,51 @@ export const CAdmitirPaciente1 = () => {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
           <div>
             <label style={labelStyle}>H.C.</label>
-            <input type="text" style={inputStyle} placeholder="H.C." />
+            <input
+              type='text'
+              style={inputStyle}
+              placeholder='H.C.'
+            />
           </div>
           <div>
             <label style={labelStyle}>Apellido Paterno</label>
-            <input type="text" style={inputStyle} placeholder="Apellido Paterno" />
+            <input
+              type='text'
+              style={inputStyle}
+              placeholder='Apellido Paterno'
+            />
           </div>
           <div>
             <label style={labelStyle}>Apellido Materno</label>
-            <input type="text" style={inputStyle} placeholder="Apellido Materno" />
+            <input
+              type='text'
+              style={inputStyle}
+              placeholder='Apellido Materno'
+            />
           </div>
           <div>
             <label style={labelStyle}>Primer Nombre</label>
-            <input type="text" style={inputStyle} placeholder="Primer Nombre" />
+            <input
+              type='text'
+              style={inputStyle}
+              placeholder='Primer Nombre'
+            />
           </div>
           <div>
             <label style={labelStyle}>Segundo Nombre</label>
-            <input type="text" style={inputStyle} placeholder="Segundo Nombre" />
+            <input
+              type='text'
+              style={inputStyle}
+              placeholder='Segundo Nombre'
+            />
           </div>
           <div>
             <label style={labelStyle}>Cédula/Pasaporte</label>
-            <input type="text" style={inputStyle} placeholder="Cédula/Pasaporte" />
+            <input
+              type='text'
+              style={inputStyle}
+              placeholder='Cédula/Pasaporte'
+            />
           </div>
         </div>
 
@@ -138,14 +160,54 @@ export const CAdmitirPaciente1 = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
-                  <td style={thTdStyle}><input type="text" style={inputStyle} /></td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
+                  <td style={thTdStyle}>
+                    <input
+                      type='text'
+                      style={inputStyle}
+                    />
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -155,23 +217,42 @@ export const CAdmitirPaciente1 = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
             <div>
               <label style={labelStyle}>Estado Civil</label>
-              <input type="text" style={inputStyle} placeholder="Estado Civil" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Estado Civil'
+              />
             </div>
             <div>
               <label style={labelStyle}>Tipo Sangre</label>
-              <input type="text" style={inputStyle} placeholder="Tipo Sangre" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Tipo Sangre'
+              />
             </div>
             <div>
               <label style={labelStyle}>Fecha de Nacimiento</label>
-              <input type="date" style={inputStyle} />
+              <input
+                type='date'
+                style={inputStyle}
+              />
             </div>
             <div>
               <label style={labelStyle}>Edad</label>
-              <input type="text" style={inputStyle} placeholder="Edad" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Edad'
+              />
             </div>
             <div>
               <label style={labelStyle}>Lugar de Nacimiento</label>
-              <input type="text" style={inputStyle} placeholder="Lugar de Nacimiento" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Lugar de Nacimiento'
+              />
             </div>
           </div>
 
@@ -179,23 +260,42 @@ export const CAdmitirPaciente1 = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
             <div>
               <label style={labelStyle}>Nacionalidad</label>
-              <input type="text" style={inputStyle} placeholder="Nacionalidad" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Nacionalidad'
+              />
             </div>
             <div>
               <label style={labelStyle}>Zona</label>
-              <input type="text" style={inputStyle} placeholder="Zona" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Zona'
+              />
             </div>
             <div>
               <label style={labelStyle}>Barrio</label>
-              <input type="text" style={inputStyle} placeholder="Barrio" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Barrio'
+              />
             </div>
             <div>
               <label style={labelStyle}>Fecha de Afiliación</label>
-              <input type="date" style={inputStyle} />
+              <input
+                type='date'
+                style={inputStyle}
+              />
             </div>
             <div>
               <label style={labelStyle}>Código IESS</label>
-              <input type="text" style={inputStyle} placeholder="Código IESS" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Código IESS'
+              />
             </div>
           </div>
 
@@ -203,18 +303,30 @@ export const CAdmitirPaciente1 = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
             <div>
               <label style={labelStyle}>Provincia</label>
-              <input type="text" style={inputStyle} placeholder="Provincia" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Provincia'
+              />
             </div>
             <div>
               <label style={labelStyle}>Cantón</label>
-              <input type="text" style={inputStyle} placeholder="Cantón" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Cantón'
+              />
             </div>
             <div>
               <label style={labelStyle}>Parroquia</label>
-              <input type="text" style={inputStyle} placeholder="Parroquia" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Parroquia'
+              />
             </div>
             <button
-              type="button"
+              type='button'
               style={buttonStyle}
               onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
               onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
@@ -222,7 +334,7 @@ export const CAdmitirPaciente1 = () => {
               Completar Datos
             </button>
             <button
-              type="button"
+              type='button'
               style={buttonStyle}
               onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
               onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
@@ -235,11 +347,19 @@ export const CAdmitirPaciente1 = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
             <div>
               <label style={labelStyle}>Dirección Domicilio</label>
-              <input type="text" style={inputStyle} placeholder="Dirección Domicilio" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Dirección Domicilio'
+              />
             </div>
             <div>
               <label style={labelStyle}>Teléfono</label>
-              <input type="text" style={inputStyle} placeholder="Teléfono" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Teléfono'
+              />
             </div>
           </div>
         </div>
@@ -250,19 +370,35 @@ export const CAdmitirPaciente1 = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
             <div>
               <label style={labelStyle}>ID ISSFA</label>
-              <input type="text" style={inputStyle} placeholder="ID ISSFA" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='ID ISSFA'
+              />
             </div>
             <div>
               <label style={labelStyle}>Fuerza</label>
-              <input type="text" style={inputStyle} placeholder="Fuerza" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Fuerza'
+              />
             </div>
             <div>
               <label style={labelStyle}>Grado</label>
-              <input type="text" style={inputStyle} placeholder="Grado" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Grado'
+              />
             </div>
             <div>
               <label style={labelStyle}>Situación</label>
-              <input type="text" style={inputStyle} placeholder="Situación" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Situación'
+              />
             </div>
           </div>
         </div>
@@ -273,22 +409,38 @@ export const CAdmitirPaciente1 = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
             <div>
               <label style={labelStyle}>Nombre</label>
-              <input type="text" style={inputStyle} placeholder="Nombre" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Nombre'
+              />
             </div>
             <div>
               <label style={labelStyle}>Dirección Domicilio</label>
-              <input type="text" style={inputStyle} placeholder="Dirección Domicilio" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Dirección Domicilio'
+              />
             </div>
             <div>
               <label style={labelStyle}>Teléfono</label>
-              <input type="text" style={inputStyle} placeholder="Teléfono" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Teléfono'
+              />
             </div>
             <div>
               <label style={labelStyle}>Relación</label>
-              <input type="text" style={inputStyle} placeholder="Relación" />
+              <input
+                type='text'
+                style={inputStyle}
+                placeholder='Relación'
+              />
             </div>
             <button
-              type="button"
+              type='button'
               style={buttonStyle}
               onMouseEnter={(e) => Object.assign(e.target.style, buttonHoverStyle)}
               onMouseLeave={(e) => Object.assign(e.target.style, buttonStyle)}
